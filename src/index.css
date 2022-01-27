@@ -1,0 +1,46 @@
+body {
+  margin: 50px;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.select {
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+.input {
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+.addBtn {
+  background-color: #007bff;
+  border: none;
+  font-weight: 700;
+  color: #efefef;
+  font-family: cursive;
+  border-radius: 5px;
+}
+
+.removeBtn {
+  background-color: #007bff;
+  border: none;
+  font-weight: 700;
+  color: #efefef;
+  font-family: cursive;
+  border-radius: 5px;
+  padding: 10px;
+}
