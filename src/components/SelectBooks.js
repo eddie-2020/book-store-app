@@ -25,7 +25,7 @@ const Select = () => {
     <div>
       <select className="select" style={{ padding: 10, margin: 70 }}>
         {types.map((type) => (
-          <option key={type.id} value={type.val}>{type.val}</option>
+          <option key={type.id} value={type.val} onChange={(e) => setOption(e.target.value)} >{type.val}</option>
         ))}
       </select>
     </div>
