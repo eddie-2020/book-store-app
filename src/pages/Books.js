@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import BookContainer from '../components/BookStore';
+import BookList from '../components/BookStore';
 import InputBook from '../components/InputBooks';
 import Header from '../components/Header';
 
@@ -18,7 +18,7 @@ const BooksContainer = styled.div`
 const Books = () => (
   <BooksContainer>
     <Header />
-    <BookContainer />
+    <BookList />
     <hr />
     <InputBook />
   </BooksContainer>
