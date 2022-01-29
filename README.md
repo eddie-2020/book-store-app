@@ -7,6 +7,7 @@ This project was built to add books, remove books, update books and comment on t
 
 ![](/src/assets/booksPage.PNG)
 ![](/src/assets/addRemove.PNG)
+![](/src/assets/RecentBookStore.PNG)
 
 
 # Built With
@@ -31,10 +32,6 @@ Install: Install linters with the npx commands given in the linters.yml file.
 Usage: N/A
 Run tests: Run syntax tests with the use of the npx commands given in the linters.yml file.
 Deployment: Run index.html on your local server.
-
-# Live Version
-
-Live Demo Link:
 
 # Authors
 
