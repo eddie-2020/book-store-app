@@ -1,4 +1,4 @@
-import BookStore from '../components/BookConatainer';
+import BookStore from '../components/BookStore';
 import Header from '../components/Header';
 import InputBooks from '../components/InputBooks';
 
