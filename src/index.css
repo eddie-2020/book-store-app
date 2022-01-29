@@ -14,6 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #efefef;
 }
 
 .select {
@@ -49,4 +50,8 @@ body {
   border: 2px solid #007bff;
   border-radius: 100px;
   padding: 10px;
+}
+
+.renderer {
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
 }

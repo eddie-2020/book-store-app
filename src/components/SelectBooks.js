@@ -23,7 +23,7 @@ const Select = () => {
   ];
   return (
     <div>
-      <select className="select" style={{ padding: 10 }}>
+      <select className="select" style={{ padding: 10, margin: 70 }}>
         {types.map((type) => (
           <option key={type.id} value={type.val}>{type.val}</option>
         ))}

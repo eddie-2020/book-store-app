@@ -23,23 +23,62 @@ const Book = ({
   };
 
   return (
-    <div style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#fff',
-    }}
+    <div
+      className="renderer"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        background: '#fff',
+        padding: 10,
+        margin: 20,
+        borderRadius: 5,
+      }}
     >
       <div>
-        <p>{category}</p>
-        <h2>{title}</h2>
-        <span>{author}</span>
-        <div>
-          <button type="button">Comments</button>
-          <button type="button" onClick={handleRemove}>Remove</button>
-          <button type="button">Edit</button>
+        <p style={{ padding: 10 }}>{category}</p>
+        <h2 style={{ padding: 10 }}>{title}</h2>
+        <span style={{ padding: 10, marginBottom: 10 }}>{author}</span>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <button
+            type="button"
+            style={{
+              border: 'none', borderRadius: 5, fontWeight: 700, padding: 10, margin: 10,
+            }}
+          >
+            Comments
+          </button>
+          <div>
+            |
+          </div>
+          <button
+            type="button"
+            style={{
+              border: 'none', borderRadius: 5, fontWeight: 700, padding: 10, margin: 10,
+            }}
+            onClick={handleRemove}
+          >
+            Remove
+          </button>
+          <div>
+            |
+          </div>
+          <button
+            type="button"
+            style={{
+              border: 'none', borderRadius: 5, fontWeight: 700, padding: 10, margin: 10,
+            }}
+          >
+            Edit
+          </button>
         </div>
       </div>
       <div className="progress">
         <div style={{ width: '4.25rem', height: '4.25rem' }}>
-          <CircularProgressbar value={percent} styles={buildStyles({ pathColor: '#0290ff' })} />
+          <CircularProgressbar
+            value={percent}
+            styles={buildStyles({ pathColor: '#0290ff' })}
+          />
         </div>
         <div>
           <p>
@@ -50,7 +89,7 @@ const Book = ({
         </div>
       </div>
       <div className="chapter">
-        <p>CURRENT CHAPTER</p>
+        <p style={{ fontWeight: 700 }}>CURRENT CHAPTER</p>
         <span>
           Chapter
           {chapter}

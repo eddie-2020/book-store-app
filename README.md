@@ -7,6 +7,7 @@ This project was built to add books, remove books, update books and comment on t
 
 ![](/src/assets/booksPage.PNG)
 ![](/src/assets/addRemove.PNG)
+![](/src/assets/FullBookStore.PNG)
 
 
 # Built With
