@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import BookContainer from '../components/Bookstore';
+import BookContainer from '../components/BookStore';
 import InputBook from '../components/InputBooks';
 import Header from '../components/Header';
 
