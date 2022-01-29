@@ -33,10 +33,6 @@ Usage: N/A
 Run tests: Run syntax tests with the use of the npx commands given in the linters.yml file.
 Deployment: Run index.html on your local server.
 
-# Live Version
-
-Live Demo Link:
-
 # Authors
 
 GitHub: https://github.com/oluyaratosin123
