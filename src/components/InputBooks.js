@@ -28,12 +28,12 @@ const InputBook = () => {
 
   return (
     <section>
-      <div style={{ textAlign: 'center', fontFamily: 'cursive' }}>
-        <h2>ADD NEW BOOK</h2>
+      <div>
+        <h2 style={{ textAlign: 'center', fontFamily: 'cursive' }}>ADD NEW BOOK</h2>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
-        <input type="text" style={{ padding: 10 }} className="input" ref={titleInput} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" style={{ padding: 10 }} className="input" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <input type="text" className="input" ref={titleInput} style={{ padding: 10 }} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input type="text" className="input" placeholder="Author" style={{ padding: 10 }} value={author} onChange={(e) => setAuthor(e.target.value)} />
         <Select />
         <Button text="ADD BOOK" handleClick={submitBook} />
       </div>
