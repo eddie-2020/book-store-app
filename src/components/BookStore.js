@@ -13,7 +13,7 @@ const Container = styled.div`
   margin-bottom: 2.9rem;
 `;
 
-const BookList = () => {
+const BookContainer = () => {
   const dispatch = useDispatch();
   const books = useSelector(({ booksReducer }) => booksReducer.books);
   const loading = useSelector(({ loadingReducer }) => loadingReducer.loading);
@@ -35,4 +35,4 @@ const BookList = () => {
   );
 };
 
-export default BookList;
+export default BookContainer;
