@@ -36,7 +36,7 @@ const InputBook = () => {
       }}
       >
         <input type="text" className="input" ref={titleInput} style={{ padding: 10, margin: 70 }} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" className="input" placeholder="Author" style={{ padding: 10, margin: 70 }} value={author} onChange={(e) => setAuthor(e.target.value)} />
+
         <Select />
         <Button text="ADD BOOK" handleClick={submitBook} />
       </div>
