@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { ImUser } from 'react-icons/im';
 
 const Header = () => {
-  const navLinks = [
+  const links = [
     {
       id: 1,
       path: '/',
@@ -19,38 +19,27 @@ const Header = () => {
       style={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-between',
         padding: '10px 50px',
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-evenly',
-          fontFamily: 'cursive',
-        }}
-      >
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div>
-          <h2>Bookstore CMS</h2>
+          <h2 style={{ color: '#007bff' }}>Bookstore CMS</h2>
         </div>
-        <nav style={{ margin: 20 }}>
-          {navLinks.map((link) => (
-            <NavLink
-              style={{ margin: 20, textDecoration: 'none' }}
-              key={link.path}
-              to={link.path}
-              className="links"
-            >
+        <nav>
+          {links.map((link) => (
+            <NavLink style={{ margin: 20, textDecoration: 'none', fontWeight: 700 }} key={link.path} to={link.path} className="links">
               {link.text}
             </NavLink>
           ))}
         </nav>
       </div>
       <div>
-        <ImUser />
+        <ImUser className="imUser" />
       </div>
     </header>
+
   );
 };
 
