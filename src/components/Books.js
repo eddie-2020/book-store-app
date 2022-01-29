@@ -1,10 +1,11 @@
-import { useState } from 'react'; // Import UseState
-import { useDispatch } from 'react-redux'; // Import UseDispatch
-import { removeBook } from '../redux/Books/newBooks'; // Import Action Creator
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import proptypes from 'proptypes';
+import PropTypes from 'prop-types';
+
 import Button from './Btn';
+import { removeBook } from '../redux/books/books';
 
 const Book = ({
   id, category, title, author, chapter,
@@ -22,61 +23,34 @@ const Book = ({
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        background: '#efefef',
-      }}
+    <div style={{
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#fff',
+    }}
     >
       <div>
-        <p>
-          {' '}
-          {category}
-          {' '}
-        </p>
-        <h2>
-          {' '}
-          {title}
-          {' '}
-        </h2>
-        <span>
-          {' '}
-          {author}
-          {' '}
-        </span>
+        <p>{category}</p>
+        <h2>{title}</h2>
+        <span>{author}</span>
         <div>
-          <button type="button">Comment</button>
-          <button type="button" onClick={handleRemove}>
-            Remove
-          </button>
+          <button type="button">Comments</button>
+          <button type="button" onClick={handleRemove}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>
-      <div className="showProgress">
+      <div className="progress">
         <div style={{ width: '4.25rem', height: '4.25rem' }}>
-          <CircularProgressbar
-            value={percent}
-            style={buildStyles({ pathColor: '#007bff' })}
-          />
+          <CircularProgressbar value={percent} styles={buildStyles({ pathColor: '#0290ff' })} />
         </div>
-
         <div>
           <p>
-            {' '}
             {percent}
-            {' '}
             %
-            {' '}
           </p>
-          <p> Completed </p>
+          <p>Completed</p>
         </div>
       </div>
-
       <div className="chapter">
-        <p style={{ textTransform: 'uppercase' }}>Current Chapter</p>
-
+        <p>CURRENT CHAPTER</p>
         <span>
           Chapter
           {chapter}
@@ -87,12 +61,12 @@ const Book = ({
   );
 };
 
-Book.proptypes = {
-  id: proptypes.string.isRequired,
-  category: proptypes.string.isRequired,
-  title: proptypes.string.isRequired,
-  author: proptypes.string.isRequired,
-  author: proptypes.string.isRequired,
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  chapter: PropTypes.string.isRequired,
 };
 
 export default Book;

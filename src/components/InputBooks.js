@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
-import { v4 as uuid4v } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { useState, useRef } from 'react';
 
 import Button from './Btn';
-import SelectBooks from './SelectBooks';
-import { addBook } from '../redux/Books/newBooks';
+import Select from './SelectBooks';
+import { addBook } from '../redux/books/books';
 
-const inputBooks = () => {
+const InputBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const titleInput = useRef(null);
@@ -15,13 +15,12 @@ const inputBooks = () => {
 
   const submitBook = () => {
     const newBook = {
-      id: uuid4v(),
+      id: uuidv4(),
       title,
       author,
     };
-
-    const response = () => title !== '' && author !== '' && dispatch(addBook(newBook));
-    response(),
+    const res = () => title !== '' && author !== '' && dispatch(addBook(newBook));
+    res();
     titleInput.current.focus();
     setTitle('');
     setAuthor('');
@@ -29,17 +28,17 @@ const inputBooks = () => {
 
   return (
     <section>
-      <div>
+      <div style={{ textAlign: 'center', fontFamily: 'cursive' }}>
         <h2>ADD NEW BOOK</h2>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <input type="text" ref={titleInput} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" placeholder="Add Books Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
-        <SelectBooks />
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
+        <input type="text" style={{ padding: 10 }} className="input" ref={titleInput} placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input type="text" style={{ padding: 10 }} className="input" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <Select />
         <Button text="ADD BOOK" handleClick={submitBook} />
       </div>
     </section>
   );
 };
 
-export default inputBooks;
+export default InputBook;

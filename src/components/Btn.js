@@ -1,16 +1,12 @@
-import proptypes from 'proptypes';
+import PropTypes from 'prop-types';
 
 const Button = ({ text, handleClick }) => (
-  <button type="button" onClick={handleClick}>
-    {' '}
-    {text}
-    {' '}
-  </button>
+  <button className="addBtn" style={{ padding: 10 }} type="button" onClick={handleClick}>{text}</button>
 );
 
-Button.proptypes = {
-  text: proptypes.string.isRequired,
-  handleClick: proptypes.string.isRequired,
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  handleClick: PropTypes.string.isRequired,
 };
 
 export default Button;

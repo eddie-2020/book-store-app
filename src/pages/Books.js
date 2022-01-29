@@ -1,25 +1,16 @@
-import BookStore from '../components/BookStore';
+import BookContainer from '../components/BookStore';
 import Header from '../components/Header';
-import InputBooks from '../components/InputBooks';
+import InputBook from '../components/InputBooks';
 
 const Books = () => (
   <div>
     <Header />
-    <div style={{ height: 2, backgroundColor: '#efefef', marginBottom: 30 }} />
-    <div>
-      <div>
-        <BookStore />
-        <div>
-          <InputBooks />
-          <button type="submit" placeholder="delete" className="removeBtn">
-            {' '}
-            Delete
-            {' '}
-          </button>
-        </div>
-      </div>
+    <div style={{ padding: '10px 50px' }}>
+      <BookContainer />
+      <InputBook />
     </div>
   </div>
+
 );
 
 export default Books;

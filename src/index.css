@@ -44,3 +44,9 @@ body {
   border-radius: 5px;
   padding: 10px;
 }
+
+.imUser {
+  border: 2px solid #007bff;
+  border-radius: 100px;
+  padding: 10px;
+}

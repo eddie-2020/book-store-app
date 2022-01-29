@@ -1,39 +1,35 @@
-const SelectBooks = () => {
-  const bookTypes = [
+const Select = () => {
+  const types = [
     {
       id: 1,
-      value: 'Category',
+      val: 'Category',
     },
     {
       id: 2,
-      value: 'Action',
+      val: 'Action',
     },
     {
       id: 3,
-      value: 'Science Fiction',
+      val: 'Sience Fiction',
     },
     {
       id: 4,
-      value: 'Economy',
+      val: 'Economy',
     },
     {
       id: 5,
-      value: 'Comedy',
+      val: 'Comedy',
     },
   ];
   return (
     <div>
       <select style={{ padding: 10 }} className="select">
-        {bookTypes.map((type) => (
-          <option key={type.id} value={type.value}>
-            {' '}
-            {type.value}
-            {' '}
-          </option>
+        {types.map((type) => (
+          <option key={type.id} value={type.val}>{type.val}</option>
         ))}
       </select>
     </div>
   );
 };
 
-export default SelectBooks;
+export default Select;
