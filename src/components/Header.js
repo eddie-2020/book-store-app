@@ -10,7 +10,7 @@ const Header = () => {
     },
     {
       id: 2,
-      path: '/categories',
+      path: '/categorie',
       text: 'CATEGORIES',
     },
   ];
